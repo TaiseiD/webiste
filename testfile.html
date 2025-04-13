@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <script>
+        function checkPassword() {
+            var password = prompt("Please enter the password:");
+            if (password === "yourPassword") {
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                alert("Incorrect password!");
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <div id="protectedContent" style="display:none;">
+        <h1>Protected Content</h1>
+        <p>This content is protected by a password.</p>
+        <!-- Your HTML code goes here -->
+    </div>
+</body>
+</html>
